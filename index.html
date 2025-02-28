@@ -63,6 +63,10 @@
 <a href="assets/pdf/Manzo_QA_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
     <i class="fas fa-file-pdf"></i> Download QA CV
 </a>
+
+                        <button id="shareButton" class="btn btn-outline-primary btn-sm">Share this Page</button>
+                    <input type="text" id="pageUrl" style="position: absolute; left: -9999px;" value="https://tonymanzo.ca/">
+
                     </div>
                 </div>
             </section>
@@ -76,14 +80,14 @@
                         <div class="flex-grow-1">
                         <h3 class="mb-0">QA Manager</h3>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">1997 - Current</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">2015 - Current</span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                         <h3 class="mb-0">QA / QC</h3>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 1994 - 1997</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 1994 - 2015</span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -114,7 +118,7 @@
                         <div class="flex-grow-1">
                         <h3 class="mb-0">Engineering Technologist</h3>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">1996 - 2006</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">1995 - 2006</span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -296,7 +300,10 @@
 <!-- PDF View Button -->
 <a href="assets/pdf/Manzo_QA_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
     <i class="fas fa-file-pdf"></i> Download QA CV
-</a>                    
+</a>               
+        <button id="shareButton" class="btn btn-outline-primary btn-sm">Share this Page</button>
+                <input type="text" id="pageUrl" style="position: absolute; left: -9999px;" value="https://tonymanzo.ca/">
+                 
 
       
                     </ul>
@@ -307,5 +314,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+        document.getElementById('shareButton').addEventListener('click', function() {
+            const pageUrl = document.getElementById('pageUrl');
+            pageUrl.select();
+            document.execCommand('copy');
+            alert('Link copied to clipboard!');
+        });
+    </script>
     </body>
 </html>
